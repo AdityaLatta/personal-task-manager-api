@@ -35,6 +35,10 @@ export async function up(queryInterface, Sequelize) {
             type: Sequelize.DATE,
             defaultValue: Sequelize.fn("NOW"),
         },
+        deletedAt: {
+            type: Sequelize.DATE,
+            allowNull: true,
+        },
     });
 }
 export async function down(queryInterface) {
