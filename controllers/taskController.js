@@ -62,8 +62,6 @@ export async function createTask(req, res) {
 
         if (!title) {
             return res.status(400).json({ error: "Title is required" });
-        } else if (!description) {
-            return res.status(400).json({ error: "Description is required" });
         } else if (!dueDate) {
             return res.status(400).json({ error: "Due Date is required" });
         }
