@@ -61,11 +61,11 @@ export async function createTask(req, res) {
         const userId = req.user.id;
 
         if (!title) {
-            return res.status(400).json({ error: "Title id required" });
+            return res.status(400).json({ error: "Title is required" });
         } else if (!description) {
-            return res.status(400).json({ error: "Description id required" });
+            return res.status(400).json({ error: "Description is required" });
         } else if (!dueDate) {
-            return res.status(400).json({ error: "Due Date id required" });
+            return res.status(400).json({ error: "Due Date is required" });
         }
 
         const task = await Task.create({
