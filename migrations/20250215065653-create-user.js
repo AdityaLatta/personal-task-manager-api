@@ -37,6 +37,6 @@ export async function up(queryInterface, Sequelize) {
         },
     });
 }
-export async function down(queryInterface, Sequelize) {
+export async function down(queryInterface) {
     await queryInterface.dropTable("Users");
 }
