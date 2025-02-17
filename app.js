@@ -4,9 +4,12 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/authRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import errorMiddleware from "./middleware/errorMiddleware.js";
+import { connectDb } from "./services/db.js";
 
 dotenv.config();
 const app = express();
+
+connectDb();
 
 app.use(express.json());
 app.use(cookieParser());
