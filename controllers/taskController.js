@@ -25,7 +25,7 @@ export async function getTasks(req, res) {
         const orderBy = [];
 
         if (sortBy) {
-            orderBy.push([sortBy, order.toUpperCase()]);
+            orderBy.push([sortBy, order]);
         }
 
         const tasks = await Task.findAll({ where, order: orderBy });
